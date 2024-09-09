@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:28:04 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/06 14:20:11 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/09 22:55:09 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,8 @@ typedef struct s_data
 }t_data;
 
 #endif
+
+//--------------------PARSE--------------------//
+int			parse_arguments(int argc, char *argv, t_data *data);
+//--------------------UTILS--------------------//
+int			ft_strlen(char *str);

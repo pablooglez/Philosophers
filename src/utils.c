@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/06 14:22:30 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/06 14:34:38 by pablogon         ###   ########.fr       */
+/*   Created: 2024/09/09 17:34:43 by pablogon          #+#    #+#             */
+/*   Updated: 2024/09/09 17:38:30 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-int	main(int argc, char **argv)
+int	ft_strlen(char *str)
 {
-	t_data	data;
+	int	i;
 
-	
+	i = 0;
+	while (str[i])
+		i++;
+	return(i);
 }
