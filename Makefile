@@ -6,7 +6,7 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 11:24:42 by pablogon          #+#    #+#              #
-#    Updated: 2024/09/09 22:55:52 by pablogon         ###   ########.fr        #
+#    Updated: 2024/09/20 15:12:00 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,11 @@ INC_DIR = include
 
 HEADERS := -I$(INC_DIR)
 
-SRCS	:= philo.c \
+SRCS	:= init.c \
+		main.c \
+		parse.c \
+		threads.c \
+		utils.c \
 
 OBJS	:= ${SRCS:.c=.o}
 

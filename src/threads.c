@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   threads.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 17:34:43 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/20 15:18:00 by pablogon         ###   ########.fr       */
+/*   Created: 2024/09/20 14:57:46 by pablogon          #+#    #+#             */
+/*   Updated: 2024/09/20 15:12:51 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-int	ft_strlen(char *str)
+void	philosopher_rutine(void *arg)
 {
+	t_philosophers *philo = (t_philosophers *) arg;
+
 	int	i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return(i);
 }
 
-long long	timestamp_in_ms(void)
+
+int	create_threads(t_data *data)
 {
-	struct timeval	time;
-	long long		milliseconds;
-
-	gettimeofday(&time, NULL);
 	
-	milliseconds = (time.tv_sec * 1000LL) + (time.tv_usec / 1000);
-
-	return(milliseconds);
 }

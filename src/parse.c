@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 21:22:32 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/09 22:50:02 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/20 13:45:17 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	parse_arguments(int argc, char *argv, t_data *data)
 	}
 	else
 		data->must_eat_count = -1;
+	
 	if (data->number_of_philosophers <= 0 || data->time_to_die <= 0 ||
 	data->time_to_eat <= 0 || data->time_to_sleep <= 0)
 		return (0);
