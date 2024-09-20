@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:28:04 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/20 15:08:33 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/20 16:33:44 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_philosophers
 	pthread_t		thread;
 	pthread_mutex_t	*left_fork;
 	pthread_mutex_t	*right_fork;
+	t_data			*data;
 }t_philosophers;
 
 
