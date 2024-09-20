@@ -6,26 +6,26 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 11:24:42 by pablogon          #+#    #+#              #
-#    Updated: 2024/09/20 15:12:00 by pablogon         ###   ########.fr        #
+#    Updated: 2024/09/20 21:52:08 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME:= Philosophers
 
 CFLAGS:= -g -Wall -Werror -Wextra \
-		-g -fsanitize=address,undefined \
-		-Wunreachable-code -Ofast \
+
 
 SRC_DIR = src
 INC_DIR = include
 
 HEADERS := -I$(INC_DIR)
 
-SRCS	:= init.c \
-		main.c \
-		parse.c \
-		threads.c \
-		utils.c \
+SRCS	:= src/init.c \
+		src/main.c \
+		src/monitor.c \
+		src/parse.c \
+		src/threads.c \
+		src/utils.c \
 
 OBJS	:= ${SRCS:.c=.o}
 

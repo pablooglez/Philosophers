@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 14:22:30 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/20 13:42:55 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/20 21:14:51 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	main(int argc, char **argv)
 		if (!create_threads(&data))
 			return(write(2,"Error: Can't create philosopher\n", 32), 1);
 		monitor_simulation(&data);
-		cleanup_simulation(&data);
 	}
 	else
 		return(write(2, "Error: Incorrect arguments\n", 27), 1);

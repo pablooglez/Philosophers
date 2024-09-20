@@ -6,18 +6,18 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 21:22:32 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/20 13:45:17 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/20 22:34:04 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-int	parse_arguments(int argc, char *argv, t_data *data)
+int	parse_arguments(int argc, char **argv, t_data *data)
 {
 	data->number_of_philosophers = ft_atoi(argv[1]);
 	data->time_to_die = ft_atoi(argv[2]);
 	data->time_to_eat = ft_atoi(argv[3]);
-	data->time_to_die = ft_atoi(argv[4]);
+	data->time_to_sleep = ft_atoi(argv[4]);
 
 	if (argc == 6)
 	{
