@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:28:04 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/20 22:31:34 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:25:52 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ typedef struct s_data
 	long long		time_to_eat;
 	long long		time_to_sleep;
 	int				must_eat_count;
+	int				died_philosopher;
+	int				philosophers_done;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	print_lock;
 	t_philosophers	*philosophers;
@@ -63,10 +65,12 @@ int			parse_arguments(int argc, char **argv, t_data *data);
 
 //--------------------THREADS------------------//
 void		*philosopher_rutine(void *arg);
-void		print_lock(t_philosophers *philo, char *msg);
+int			print_lock(t_philosophers *philo, char *msg);
 int			create_threads(t_data *data);
 
 //--------------------UTILS--------------------//
 int			ft_strlen(char *str);
 long long	timestamp_in_ms(void);
 int			ft_atoi(const char *str);
+int			uwait(long long time, t_philosophers *philo);
+int			all_philosophers_ate_enough(t_data *data);

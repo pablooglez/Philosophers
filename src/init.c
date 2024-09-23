@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:47:44 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/20 21:59:13 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:56:45 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,8 @@ int	init_simulation(t_data *data)
 		free_resources(data);
 		return (0);
 	}
-	
+
+	data->died_philosopher = 0;
 	int	i;
 	i = 0;
 	while (i < data->number_of_philosophers)

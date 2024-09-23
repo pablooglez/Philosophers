@@ -6,7 +6,7 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 11:24:42 by pablogon          #+#    #+#              #
-#    Updated: 2024/09/20 21:52:08 by pablogon         ###   ########.fr        #
+#    Updated: 2024/09/23 12:52:44 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ HEADERS := -I$(INC_DIR)
 
 SRCS	:= src/init.c \
 		src/main.c \
-		src/monitor.c \
 		src/parse.c \
 		src/threads.c \
 		src/utils.c \
