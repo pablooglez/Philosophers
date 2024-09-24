@@ -6,13 +6,15 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 11:24:42 by pablogon          #+#    #+#              #
-#    Updated: 2024/09/23 12:52:44 by pablogon         ###   ########.fr        #
+#    Updated: 2024/09/24 16:26:09 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME:= Philosophers
 
 CFLAGS:= -g -Wall -Werror -Wextra \
+		#-g -fsanitize=address,undefined \
+		#-Wunreachable-code -Ofast 
 
 
 SRC_DIR = src

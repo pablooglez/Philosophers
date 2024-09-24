@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:57:46 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/23 21:26:33 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/24 16:53:57 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,16 @@ void	*philosopher_rutine(void *arg)
 
 		pthread_mutex_unlock(philo->left_fork);
 		pthread_mutex_unlock(philo->right_fork);
+
+		if (philo->data->must_eat_count > 0 && all_philosophers_ate_enough(philo->data))
+			break;
+		
 		print_lock(philo, "is sleeping\n");
 		if(uwait(philo->data->time_to_sleep, philo))
 			break;
 		
 		print_lock(philo, "is thinking\n");
+		
 	}
 	return (NULL);
 }
