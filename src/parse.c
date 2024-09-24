@@ -6,7 +6,7 @@
 /*   By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 21:22:32 by pablogon          #+#    #+#             */
-/*   Updated: 2024/09/20 22:34:04 by pablogon         ###   ########.fr       */
+/*   Updated: 2024/09/24 20:57:55 by pablogon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	parse_arguments(int argc, char **argv, t_data *data)
 	data->time_to_die = ft_atoi(argv[2]);
 	data->time_to_eat = ft_atoi(argv[3]);
 	data->time_to_sleep = ft_atoi(argv[4]);
-
 	if (argc == 6)
 	{
 		data->must_eat_count = ft_atoi(argv[5]);
@@ -27,9 +26,8 @@ int	parse_arguments(int argc, char **argv, t_data *data)
 	}
 	else
 		data->must_eat_count = -1;
-	
-	if (data->number_of_philosophers <= 0 || data->time_to_die <= 0 ||
-	data->time_to_eat <= 0 || data->time_to_sleep <= 0)
+	if (data->number_of_philosophers <= 0 || data->time_to_die <= 0
+		|| data->time_to_eat <= 0 || data->time_to_sleep <= 0)
 		return (0);
 	return (1);
 }

@@ -6,14 +6,14 @@
 #    By: pablogon <pablogon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 11:24:42 by pablogon          #+#    #+#              #
-#    Updated: 2024/09/24 16:26:09 by pablogon         ###   ########.fr        #
+#    Updated: 2024/09/24 19:47:47 by pablogon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME:= Philosophers
+NAME:= philo
 
 CFLAGS:= -g -Wall -Werror -Wextra \
-		#-g -fsanitize=address,undefined \
+		-g -fsanitize=address,undefined \
 		#-Wunreachable-code -Ofast 
 
 
@@ -27,6 +27,7 @@ SRCS	:= src/init.c \
 		src/parse.c \
 		src/threads.c \
 		src/utils.c \
+		src/utils2.c \
 
 OBJS	:= ${SRCS:.c=.o}
 
@@ -37,7 +38,7 @@ $(SRC_DIR)/%.o: $(SRC_DIR)/%.c
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) $(HEADERS) -o $(NAME)
-	@echo "Compiling Philosophers..."
+	@echo "Compiling Philo..."
 
 clean:
 	@rm -rf $(OBJS)
